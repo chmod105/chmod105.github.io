@@ -27,7 +27,6 @@ disqus:
   # shortname: my_disqus_shortname
   shortname: csrhymes
 
-
 plugins:
   - jekyll-sitemap
   - jekyll-paginate
