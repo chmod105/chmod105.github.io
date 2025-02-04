@@ -1,34 +1,96 @@
-# Site settings
-title: chmod105's Personal Website
-email: chmod105@test.net
-description: chmod105's Ideas & Blogs
-# > # this means to ignore newlines until "baseurl:"
-#   Write an awesome description for your new site here. You can edit this
-#   line in _config.yml. It will appear in your document head meta (for
-#   Google search results) and in your feed.xml site description.
+# Site Settings
+lang: en
+title: Bulma Clean Theme
+tagline: Bulma Clean Theme
+email: your-email@domain.com
+description: >
+  The demo site for Bulma Clean Theme, made for Jekyll and GitHub pages websites
+baseurl: "/bulma-clean-theme"
+#url: "https://www.csrhymes.com"
+url: "https://chmod105.github.io"
+permalink: pretty
+#favicon: /path/to/favicon.png
+gh_sponsor: chrisrhymes
+#hide_share_buttons: true
+#theme_color: '#eeeeee'
+#fixed_navbar: top
+#direction: one of <ltr, rtl, auto>, default: ltr
+force_theme: light
 
-# baseurl: "" # the subpath of your site, e.g. /blog/
-# url: "http://yourdomain.com" # the base hostname & protocol for your site
-# twitter_username: jekyllrb
-github_username: chmod105
-permalink: /:year/:month/:day/:title/
-# this is the url root of the view source link on the footer page.
-viewsourceroot: https://github.com/chmod105/chmod105.github.io/blob/master/
-# this is the url root of the create page link on the footer page.
-newsourceroot: https://github.com/chmod105/chmod105.github.io/new/master
-#########################################
-# for duoshuo.com commenting system, uncomment following line if you do not want to include duoshuo.com. 
-#duoshuo_shortname: lixizhi
-#duoshuo_url: "https://chmod105.github.io"
-# disqus.com commenting system. please note that it is exclusive with duoshuo.com
-disqus_shortname: chmod105
-disqus_url: "https://chmod105.github.io"
-#########################################
+paginate: 5
+paginate_path: "/blog/page:num"
 
-# Build settings
+# Disqus Comments
+disqus:
+  # Leave shortname blank to disable comments site-wide.
+  # Disable comments for any post by adding `comments: false` to that post's YAML Front Matter.
+  # shortname: my_disqus_shortname
+  shortname: csrhymes
+
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-feed
+  - jekyll-seo-tag
+  - kramdown-parser-gfm
+  - jekyll-redirect-from
+
+exclude: 
+  - Gemfile
+  - clean-theme.gemspec
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+livereload: true
+
+sass:
+  style: compressed
+  source_dir: _sass
+  # load_paths: 
+    # - node_modules
+
+#google_analytics: UA-code-here
+cookie_policy: /cookie-policy/
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      show_sidebar: true
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      author: "C.S. Rhymes"
+      layout: post
+      image: https://via.placeholder.com/1200x800
+      show_sidebar: true
+
 markdown: kramdown
+highlighter: rouge
 
-# highlight
-# highlighter: pygments
-# highlighter: rouge
-# highlighter: false
+footer_menu: example_footer_menu
+
+collections:
+  products: 
+    output: true
+    layout: product
+    image: https://via.placeholder.com/800x600
+    show_sidebar: false
+
+social:
+  facebook: https://www.facebook.com/
+  instagram: https://www.instagram.com/
+  threads: https://www.threads.net/
+  tiktok: https://www.tiktok.com/
+  x: https://www.x.com/
+  youtube: https://www.youtube.com/
+  
