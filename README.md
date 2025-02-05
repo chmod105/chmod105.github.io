@@ -1,79 +1,99 @@
-# bulma-clean-theme
-
-[![Gem Version](https://badge.fury.io/rb/bulma-clean-theme.svg)](https://badge.fury.io/rb/bulma-clean-theme)
-![Gem](https://img.shields.io/gem/dt/bulma-clean-theme.svg)
-
-This is a clean and simple Jekyll Theme built with the [Bulma](https://bulma.io/) framework, providing a modern-looking site to start with. 
-
-The theme uses [Alpine.js](https://github.com/alpinejs/alpine) for its interactive components, such as mobile navbar and notifications.
-
-## Contents
-
-* [Installation](#installation)
-* [Documentation](#documentation)
-* [Upgrading to v1](#upgrading-to-v1)
-* [Contributing](#contributing)
-* [Development](#development)
-* [Licence](#licence)
-
+---
+title: "About"
+permalink: "/about/"
+layout: page
+---
 
 ## Installation
 
-Add this line to your Jekyll site's `Gemfile`:
+Just fork this [repository](https://github.com/niklasbuschmann/contrast) and adjust the `_config.yml` to use with [Github Pages](https://pages.github.com/) and your page is done.
 
-```ruby
-gem "bulma-clean-theme"
-```
+## Features
 
-And add this line to your Jekyll site's `_config.yml`:
+ - supports dark mode on macOS Mojave
+ - optional sidebar
+ - MathJax support
+ - no external ressources
+ - included archive page
+ - supports pagination
+ - feed generation
+ - responsive
+ - syntax highlighting
+ - supports comments via [disqus](https://disqus.com/) or [isso](http://posativ.org/isso/)
 
-```yaml
-theme: bulma-clean-theme
-```
+## Based on
 
-And then execute:
+- [Hyde](https://github.com/poole/hyde)
+- [Minima](https://github.com/jekyll/minima)
+- [Lagrange](https://github.com/LeNPaul/Lagrange)
+- [Font Awesome](http://fontawesome.io/)
+- [KaTeX](https://katex.org/)
+- [Pygments](https://github.com/richleland/pygments-css)
 
-    $ bundle
+## Installation (jekyll-remote-theme method)
 
-Or install it yourself as:
-
-    $ gem install bulma-clean-theme
-
-### GitHub pages
-
-### v1.0
-
-To deploy to GitHub pages using v1.x you will need to use GitHub Actions. Please see the [upgrade guide](https://www.csrhymes.com/bulma-clean-theme/docs/getting-started/upgrading-to-v1/) for more information.
-
-### v0.x
-
-If you are deploying to GitHub pages using their default build process, then you can install v0.x of the [GitHub Pages gem](https://github.com/github/pages-gem) and use `remote_theme` instead of `theme` in your `_config.yml`. 
-
-**Note that the GitHub Pages gem requires Jekyll version 3.9 and version 0.x of Bulma Clean Theme**
+You can use this theme with the `jekyll-remote-theme` plugin. Just create an empty repo, copy over the `index.html` file and add this to your `_config.yml`:
 
 ```yaml
-# With GitHub Pages Gem
-remote_theme: chrisrhymes/bulma-clean-theme@v0.14.0
+remote_theme: niklasbuschmann/contrast@v2.11
+
+plugins:
+  - jekyll-remote-theme
 ```
 
-## Documentation
+Note: to enable icons you also need to copy over the `_data` folder.
 
-Check out the demo site for the [Documentation](https://www.csrhymes.com/bulma-clean-theme/docs/)
+## Config
 
-## Upgrading to v1
+Your `_config.yml` could for example look like this:
 
-There are several breaking changes for v1. Please read the [upgrade guide](https://www.csrhymes.com/bulma-clean-theme/docs/getting-started/upgrading-to-v1/) for more information.
+```yaml
+title: "Blog Title"
+author: "Blog Author"
+description: "My personal blog about ... something"
+permalink: /:title/
+lang: "en"
+excerpt_separator: "\n\n\n"
+date_format: "%B %d, %Y"
 
-## Contributing
+# Layout
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/chrisrhymes/bulma-clean-theme. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+show_excerpts: true        # show article excerpts on the home page
+show_frame: true           # adds a gray frame to the site
+show_sidebar: false        # show a sidebar instead of the usual header
 
-## Development
+# Menu
 
-To set up your environment to develop this theme, run `bundle install`.
+navigation:                # accepts {file, title, url, icon, sidebaricon}
+  - {file: "index.html"}
+  - {file: "README.md"}
 
-Your theme is set up just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
+external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
+  - {title: Mail, icon: envelope, url: "mailto:niklasbuschmann@users.noreply.github.com"}
+  - {title: Github, icon: github, url: "https://github.com/niklasbuschmann/contrast"}
+  - {title: Subscribe, icon: rss, url: "/feed.xml"}
+
+comments:
+#  disqus_shortname: ""    # see https://disqus.com/
+#  isso_domain: ""         # see https://posativ.org/isso/
+
+plugins:
+ - jekyll-feed
+
+```
+
+## MathJax
+
+Contrast comes preinstalled with a leightweight alternative to MathJax called [KaTeX](https://katex.org/). To display equations in a post simply set `mathjax: true` in the article's front matter.
 
 ## License
 
-The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+[public domain](http://unlicense.org/)
+
+## Screenshots
+
+![screenshot](https://user-images.githubusercontent.com/4943215/109431850-cd711780-7a08-11eb-8601-2763f2ee6bb4.png)
+
+![screenshot](https://user-images.githubusercontent.com/4943215/109431832-b6cac080-7a08-11eb-9c5e-a058680c23a1.png)
+
+![screenshot](https://user-images.githubusercontent.com/4943215/73125194-5f0b8b80-3fa4-11ea-805c-8387187503ad.png)
