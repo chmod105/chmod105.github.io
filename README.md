@@ -1,99 +1,39 @@
 ---
-title: "About"
+title: "About Me"
 permalink: "/about/"
 layout: page
 ---
 
-## Installation
+> ### Education & Work Experience
+> * 평생교육 진흥원 학점 은행제 컴퓨터공학과 학사 (2018.02 졸업)
+> * 숭실대학교 컴퓨터 학과 석사 (2021.02.19 졸업)
+> * (주)게임아이 기업 부설연구소 연구원 (2021.03.01 ~ )
 
-Just fork this [repository](https://github.com/niklasbuschmann/contrast) and adjust the `_config.yml` to use with [Github Pages](https://pages.github.com/) and your page is done.
+> ### Project
+> * 무인기와 주변개체간의 관계 추론을 통한 상황 이해 기법 연구 (2018.09.02 ~ 2019.12.15) - 국방 과학 연구소
+> * 고령사회에 대응하기 위한 실 환경 휴먼케어 로봇 기술 개발 (2020.01.01 ~ 2020.12.31) - 한국 전자 통신 연구원
+> * 대용량 지식그래프 자동완성을 위한 시멘틱 분석 추론 기술 개발 (2020.01.01 ~ 2020.12.31) - 정보통신 기획 평가원
+> * 딥러닝 기반 지식그래프 자동 구축에 대한 연구 (2020.03.01 ~ 2021.02.28) - 한국 연구재단
 
-## Features
+> ### Thesis
+> * 김민성, 이민호, 이완곤, 박영택. (2020.07). 클라우드 컴퓨팅 환경에서 분산 테이블 구조를 활용한 OWL-Horst 온톨로지 추론 엔진. 정보과학회논문지, 47(7), 674-681. (OWL-Horst Ontology Inference Engine Using Distributed Table Structure in Cloud Computing Environment)
+> 
+> 
+> * 김민성, 이민호, 이완곤, 박영택. (2021.06). 질의문과 지식 그래프 관계 학습을 통한 지식 완성 시스템. 정보과학회논문지, 48(6), 649-656. (Knowledge Completion System through Learning the Relationship between Query and Knowledge Graph)
 
- - supports dark mode on macOS Mojave
- - optional sidebar
- - MathJax support
- - no external ressources
- - included archive page
- - supports pagination
- - feed generation
- - responsive
- - syntax highlighting
- - supports comments via [disqus](https://disqus.com/) or [isso](http://posativ.org/isso/)
+> ### Skills
+> * OS
+>   * Linux, Mac
+> * Language
+>   * Python
+> * Data
+>   * AWS Aurora, AWS Dynamo DB, AWS S3, Mongo DB, My SQL, Elasticsearch, AWS CloudFront(Cache)
+> * Analytics / Machine Learning
+>   * PySpark, Pands DataFrame, Polars DataFrame, Pytorch, TensorFlow
+> * Collaboration
+>   * Slack, Jira, Confluence, Flow, Notion
+> * Web / Infrastructure
+>   * Fast API, Flask, Django, Docker, AWS ElasticBeanstalk
 
-## Based on
-
-- [Hyde](https://github.com/poole/hyde)
-- [Minima](https://github.com/jekyll/minima)
-- [Lagrange](https://github.com/LeNPaul/Lagrange)
-- [Font Awesome](http://fontawesome.io/)
-- [KaTeX](https://katex.org/)
-- [Pygments](https://github.com/richleland/pygments-css)
-
-## Installation (jekyll-remote-theme method)
-
-You can use this theme with the `jekyll-remote-theme` plugin. Just create an empty repo, copy over the `index.html` file and add this to your `_config.yml`:
-
-```yaml
-remote_theme: niklasbuschmann/contrast@v2.11
-
-plugins:
-  - jekyll-remote-theme
-```
-
-Note: to enable icons you also need to copy over the `_data` folder.
-
-## Config
-
-Your `_config.yml` could for example look like this:
-
-```yaml
-title: "Blog Title"
-author: "Blog Author"
-description: "My personal blog about ... something"
-permalink: /:title/
-lang: "en"
-excerpt_separator: "\n\n\n"
-date_format: "%B %d, %Y"
-
-# Layout
-
-show_excerpts: true        # show article excerpts on the home page
-show_frame: true           # adds a gray frame to the site
-show_sidebar: false        # show a sidebar instead of the usual header
-
-# Menu
-
-navigation:                # accepts {file, title, url, icon, sidebaricon}
-  - {file: "index.html"}
-  - {file: "README.md"}
-
-external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
-  - {title: Mail, icon: envelope, url: "mailto:niklasbuschmann@users.noreply.github.com"}
-  - {title: Github, icon: github, url: "https://github.com/niklasbuschmann/contrast"}
-  - {title: Subscribe, icon: rss, url: "/feed.xml"}
-
-comments:
-#  disqus_shortname: ""    # see https://disqus.com/
-#  isso_domain: ""         # see https://posativ.org/isso/
-
-plugins:
- - jekyll-feed
-
-```
-
-## MathJax
-
-Contrast comes preinstalled with a leightweight alternative to MathJax called [KaTeX](https://katex.org/). To display equations in a post simply set `mathjax: true` in the article's front matter.
-
-## License
-
-[public domain](http://unlicense.org/)
-
-## Screenshots
-
-![screenshot](https://user-images.githubusercontent.com/4943215/109431850-cd711780-7a08-11eb-8601-2763f2ee6bb4.png)
-
-![screenshot](https://user-images.githubusercontent.com/4943215/109431832-b6cac080-7a08-11eb-9c5e-a058680c23a1.png)
-
-![screenshot](https://user-images.githubusercontent.com/4943215/73125194-5f0b8b80-3fa4-11ea-805c-8387187503ad.png)
+> ### License
+> * 정보처리기사 (2018.08.17)
