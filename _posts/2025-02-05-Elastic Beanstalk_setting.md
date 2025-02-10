@@ -6,6 +6,8 @@ categories: aws
 ![](../image/aws_ebs/aws_ebs_create.png)
 
 AWS - Elastic Beanstalk - 환경 생성 순으로 접근 시 총 6단계 구성으로 된 생성 과정이다.
+
+
 > #### 1. 환경 구성
 >       환경 티어: 웹 서버 환경
 >       애플리케이션 정보: 애플리케이션 이름 기입

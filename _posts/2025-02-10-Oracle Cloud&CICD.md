@@ -5,6 +5,7 @@ categories: cicd
 ---
 ![](../image/oracle_git/oracle_git.png)
 
+
 ### 클라우드 서비스를 제공하는 대표적인 플랫폼
 1. Amazon Web Services (AWS)
 2. Microsoft Azure
