@@ -3,7 +3,7 @@ title:  "AWS Elastic Beanstalk"
 layout: post
 categories: aws
 ---
-![AWS Elastic Beanstalk](../image/aws_elasticbeanstalk.png)
+![AWS Elastic Beanstalk](../image/aws_ebs/aws_ebs.png)
 
 기존 운영하고 있는 엘라스틱 빈스토크 서비스에서 리소스 과부하 문제가 발생 되면 ec2가 자동 추가증설이 되어 문제를 해결해 주고 있는데, ec2내 불필요하게 로드되는 부분이 있어 좀 더 신속한 대응이 어려운 부분이 있다.
 그래서 불필요한 부분을 새로운 환경에 분리하여 관리하면 리소스 과부하 문제를 더 신속하게 대처 가능할 것으로 기대되어 작업을 진행하려 한다. 
@@ -32,9 +32,9 @@ categories: aws
 도커 내 첫 번째 컨테이너에는 Fast API가 서비스 되고 있고 두 번째 컨테이너에는 Triton 서버에 올려져 있는 머신러닝 모델이 서비스 되고 있다.
 오토스케일링 설정으로 인해 ec2가 증설될 경우 웹 애플리케이션(Fast API)뿐만 아니라 Triton서버와 모델까지 업로드하게 되어 정상화 되기까지 16분 이상이 걸린다.
 
-![](../image/aws_elasticbeanstalk_structure_before.png)
+![](../image/aws_ebs/aws_ebs_structure_before.png)
 
 모델은 업데이트 주기가 엘라스틱 빈스토크 애플리케이션에 비해 상대적으로 길기 때문에 모델을 분리하여 새로운 환경에서 따로 관리하게 되면 기존 환경에서는 애플리케이션을 새로운 버전으로 배포할 때 또는
 오토스케일링으로 증설된 새로운 ec2에서 웹 애플리케이션(Fast API)만 로드 하기 때문에 배포 시간 및 오토스케일링 시간이 단축될 것으로 기대된다.
 
-![](../image/aws_elasticbeanstalk_structure_after.png)
+![](../image/aws_ebs/aws_ebs_structure_after.png)

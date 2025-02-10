@@ -3,7 +3,7 @@ title:  "AWS Elastic Beanstalk Setting"
 layout: post
 categories: aws
 ---
-![](../image/aws_ebs_create.png)
+![](../image/aws_ebs/aws_ebs_create.png)
 
 AWS - Elastic Beanstalk - 환경 생성 순으로 접근 시 총 6단계 구성으로 된 생성 과정이다.
 > #### 1. 환경 구성
