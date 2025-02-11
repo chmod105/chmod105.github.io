@@ -105,6 +105,7 @@ CI/CD는 지속적 통합(Continuous Integration, CI) 및 지속적 배포(Conti
 > ```
 > cat ~/.ssh/id_rsa.pub
 > ```
+
 > ![](../image/oracle_git/16.png)
 > 
 > git 페이지로 이동 후 우측 상단 사용자 아이콘 클릭하여 Settings를 누른다.
