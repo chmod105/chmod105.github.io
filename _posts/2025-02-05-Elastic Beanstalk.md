@@ -1,7 +1,7 @@
 ---
 title:  "AWS Elastic Beanstalk"
 layout: post
-categories: aws
+categories: blog
 ---
 ![AWS Elastic Beanstalk](../image/aws_ebs/aws_ebs.png)
 

@@ -1,7 +1,7 @@
 ---
 title:  "AWS Elastic Beanstalk Setting"
 layout: post
-categories: aws
+categories: blog
 ---
 ![](../image/aws_ebs/aws_ebs_create.png)
 

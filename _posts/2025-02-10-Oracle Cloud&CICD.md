@@ -1,7 +1,7 @@
 ---
 title:  "Oracle Cloud & Git Action CICD"
 layout: post
-categories: cicd
+categories: blog
 ---
 ![](../image/oracle_git/oracle_git.png)
 

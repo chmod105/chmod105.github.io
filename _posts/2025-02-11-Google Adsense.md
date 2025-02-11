@@ -1,7 +1,7 @@
 ---
-title:  "AWS Elastic Beanstalk"
+title:  "Google Adsense"
 layout: post
-categories: aws
+categories: blog
 ---
 ![](../image/google_adsense/google_adsense.png)
 
