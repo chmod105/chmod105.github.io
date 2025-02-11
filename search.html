@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>게시글 검색</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-jekyll-search/1.10.0/simple-jekyll-search.min.js"></script>
+</head>
+<body>
+
+    <h2>🔍 블로그 검색</h2>
+    <input type="text" id="search-input" placeholder="검색어 입력..." />
+    <ul id="results-container"></ul>
+
+    <script>
+      SimpleJekyllSearch({
+          searchInput: document.getElementById('search-input'),
+          resultsContainer: document.getElementById('results-container'),
+          json: '/search.json',
+          searchResultTemplate: '<li><a href="{url}">{title}</a> - {date}</li>',
+          noResultsText: '검색 결과가 없습니다.',
+          limit: 10
+      });
+    </script>
+
+</body>
+</html>
