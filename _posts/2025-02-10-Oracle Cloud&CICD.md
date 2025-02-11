@@ -80,7 +80,7 @@ CI/CD는 지속적 통합(Continuous Integration, CI) 및 지속적 배포(Conti
 
 > ![](../image/oracle_git/11.png)
 > 
-> 설치 후 git --version 을 통해 버전을 확인할 수 있다.
+> 설치 후 `git --version` 을 통해 버전을 확인할 수 있다.
 
 > ![](../image/oracle_git/12.png)
 > 
@@ -89,7 +89,7 @@ CI/CD는 지속적 통합(Continuous Integration, CI) 및 지속적 배포(Conti
 > git config --global user.name user_name
 > git config --global user.email user_email
 > ```
-> 기입 후 git config --global --list 를 통해 등록된 정보를 확인할 수 있다.
+> 기입 후 git config `--global --list` 를 통해 등록된 정보를 확인할 수 있다.
 
 > ![](../image/oracle_git/13.png)
 > ![](../image/oracle_git/14.png)
@@ -147,7 +147,7 @@ CI/CD는 지속적 통합(Continuous Integration, CI) 및 지속적 배포(Conti
 > 
 > 사용하는 IDE에 git repo를 다운 받는다.
 > 
-> .github/workflows/github_action_cicd.yml 를 생성해 준다.
+> `.github/workflows/github_action_cicd.yml` 를 생성해 준다.
 > yml파일명은 자유롭게 적어도 된다.
 > 내용은 main 브런치에 push가 되면 이를 감지하고 deploy작업을 수행 한다. host는 우리가 git 페이지에서 변수로 등록했던 서버의 host값을 불러오고
 > key값은 우리가 등록했던 private key값을 불러오게 된다. 이후 서버내 cd project(repo 이름) 명령어를 통해 git 폴더에 접근하여 git pull 명령어를 통해
