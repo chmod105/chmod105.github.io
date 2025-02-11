@@ -3,6 +3,16 @@
 <script src="https://cdn.jsdelivr.net/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js"></script>
 
 <style>
+  input {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  input::placeholder {
+      text-align: center;
+  }
+
   #results-container {
       min-height: 150px;
       max-height: 300px;
@@ -91,7 +101,7 @@
 
   <header>
     <a href="{{ "/" | relative_url }}" class="title">{{ site.title | escape }}</a>
-    <a style="margin: auto"><input type="text" id="search-input" placeholder="검색어 입력..." />
+    <a style="margin: auto"><input type="text" id="search-input" placeholder="게시물 검색" />
   <ul id="results-container"></ul></a>
     {% include menu.html menu=pages %}
   </header>
