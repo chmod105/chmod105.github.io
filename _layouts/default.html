@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: 'en' }}">
-
+<script src="https://cdn.jsdelivr.net/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js"></script>
+<script>
+  SimpleJekyllSearch({
+      searchInput: document.getElementById('search-input'),
+      resultsContainer: document.getElementById('results-container'),
+      json: '/search.json',
+      searchResultTemplate: '<li><a href="{url}">{title}</a> - {date}</li>',
+      noResultsText: '검색 결과가 없습니다.',
+      limit: 10
+  });
+</script>
 <head>  <!-- ✅ 추가된 부분 -->
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VPN3SC1CES"></script>
@@ -61,6 +71,8 @@
   <header>
     <a href="{{ "/" | relative_url }}" class="title">{{ site.title | escape }}</a>
     {% include menu.html menu=pages %}
+    <a><input type="text" id="search-input" placeholder="검색어 입력..." />
+    <ul id="results-container"></ul></a>
   </header>
 
   {{ content }}

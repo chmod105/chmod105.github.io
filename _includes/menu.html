@@ -1,8 +1,4 @@
-<script src="https://cdn.jsdelivr.net/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js"></script>
 <nav>
-    <input type="text" id="search-input" placeholder="검색어 입력..." />
-    <ul id="results-container"></ul>
-
 {%- for item in include.menu -%}
   {%- assign node = site.pages | where: "name", item.file | first -%}
   {%- assign url = item.url | default: node.url -%}
@@ -12,14 +8,3 @@
   </a>
 {%- endfor -%}
 </nav>
-
-<script>
-  SimpleJekyllSearch({
-      searchInput: document.getElementById('search-input'),
-      resultsContainer: document.getElementById('results-container'),
-      json: '/search.json',
-      searchResultTemplate: '<li><a href="{url}">{title}</a> - {date}</li>',
-      noResultsText: '검색 결과가 없습니다.',
-      limit: 10
-  });
-</script>
