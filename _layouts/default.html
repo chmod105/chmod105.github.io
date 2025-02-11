@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: 'en' }}">
 <script src="https://cdn.jsdelivr.net/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js"></script>
+<style>
+  #results-container {
+    min-height: 150px;  /* 최소 높이 설정 */
+    max-height: 300px;  /* 최대 높이 설정 (선택 사항) */
+    overflow-y: auto;   /* 결과가 많아지면 스크롤 생성 */
+    border: 1px solid #ddd; /* 가시적인 테두리 */
+    padding: 10px;
+    background: #fff; /* 배경색 추가 */
+}
+</style>
 
 <head>  <!-- ✅ 추가된 부분 -->
   <!-- Google tag (gtag.js) -->
@@ -60,11 +70,13 @@
   {% endif %}
 
   <header>
-    <a><input type="text" id="search-input" placeholder="검색어 입력..." />
-    <ul id="results-container"></ul></a>
     <a href="{{ "/" | relative_url }}" class="title">{{ site.title | escape }}</a>
     {% include menu.html menu=pages %}
   </header>
+  <div>
+    <a><input type="text" id="search-input" placeholder="검색어 입력..." />
+    <ul id="results-container"></ul></a>
+  </div>
 
   {{ content }}
 
