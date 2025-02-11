@@ -9,6 +9,27 @@
       overflow-y: auto;
       transition: all 0.3s ease-in-out;
   }
+
+  #topBtn {
+      position: fixed;
+      bottom: 20px;  /* 하단에서 20px 간격 */
+      right: 20px;   /* 오른쪽에서 20px 간격 */
+      background-color: #007bff; /* 버튼 색상 */
+      color: white;  /* 텍스트 색상 */
+      border: none;
+      border-radius: 5px;
+      padding: 10px 15px;
+      font-size: 16px;
+      cursor: pointer;
+      display: none;  /* 기본적으로 숨김 */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  #topBtn:hover {
+      background-color: #0056b3; /* 버튼 hover 색상 */
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  }
+
 </style>
 
 <head>  <!-- ✅ 추가된 부분 -->
@@ -74,7 +95,7 @@
   <ul id="results-container"></ul></a>
     {% include menu.html menu=pages %}
   </header>
-
+  <a href="#" id="topBtn" title="Go to top">&#8679; Top</a>
   {{ content }}
 
   {% if site.external %}
