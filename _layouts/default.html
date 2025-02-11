@@ -70,10 +70,10 @@
 
   <header>
     <a href="{{ "/" | relative_url }}" class="title">{{ site.title | escape }}</a>
+    <a style="margin: auto"><input type="text" id="search-input" placeholder="검색어 입력..." />
+  <ul id="results-container"></ul></a>
     {% include menu.html menu=pages %}
   </header>
-  <a style="margin: auto"><input type="text" id="search-input" placeholder="검색어 입력..." />
-  <ul id="results-container"></ul></a>
 
   {{ content }}
 
