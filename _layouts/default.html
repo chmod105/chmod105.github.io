@@ -2,9 +2,6 @@
 <html lang="{{ page.lang | default: site.lang | default: 'en' }}">
 <script src="https://cdn.jsdelivr.net/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js"></script>
 
-<!-- Top 버튼 -->
-<a href="#" id="topBtn" title="Go to top">&#8679; Top</a>
-
 <style>
   #results-container {
       min-height: 150px;
@@ -34,25 +31,6 @@
       box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
   }
 </style>
-
-<script>
-  var topBtn = document.getElementById("topBtn");
-
-  window.onscroll = function() {
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-      topBtn.style.display = "block";
-    } else {
-      topBtn.style.display = "none";
-    }
-  };
-
-  topBtn.onclick = function() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-    return false;
-  };
-</script>
-
 
 <head>  <!-- ✅ 추가된 부분 -->
   <!-- Google tag (gtag.js) -->
@@ -118,7 +96,7 @@
     {% include menu.html menu=pages %}
   </header>
   {{ content }}
-
+  <a href="#" id="topBtn" title="Go to top">&#8679; Top</a>
   {% if site.external %}
   <footer>
     <div>{{ site.description | default: site.title }}</div>
@@ -138,4 +116,22 @@
       noResultsText: '검색 결과가 없습니다.',
       limit: 10
   });
+</script>
+
+<script>
+  var topBtn = document.getElementById("topBtn");
+
+  window.onscroll = function() {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      topBtn.style.display = "block";
+    } else {
+      topBtn.style.display = "none";
+    }
+  };
+
+  topBtn.onclick = function() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+    return false;
+  };
 </script>
