@@ -11,23 +11,29 @@
       transition: all 0.3s ease-in-out;
   }
 
+  html, body {
+      height: 100%;  /* 페이지 전체 높이를 100%로 설정 */
+      margin: 0;     /* 기본 여백 제거 */
+      position: relative;  /* body의 위치를 기준으로 하위 요소의 위치를 결정 */
+  }
+
   #topBtn {
-      position: fixed;
-      bottom: 20px;
-      right: 20%;
-      background-color: #007bff;
-      color: white;
+      position: fixed;  /* 고정 위치 */
+      bottom: 20px;      /* body 하단에서 20px 간격 */
+      right: 20px;       /* body 우측에서 20px 간격 */
+      background-color: #007bff;  /* 버튼 색상 */
+      color: white;      /* 텍스트 색상 */
       border: none;
       border-radius: 5px;
       padding: 10px 15px;
       font-size: 16px;
       cursor: pointer;
-      display: none;
+      display: none;     /* 기본적으로 숨김 */
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 
   #topBtn:hover {
-      background-color: #0056b3;
+      background-color: #0056b3; /* hover 시 색상 변경 */
       box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
   }
 </style>
