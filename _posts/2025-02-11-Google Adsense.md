@@ -2,6 +2,7 @@
 title: "Google Adsense"
 layout: post
 categories: skill
+tags: [광고 수익, 구글 광고, 구글 애드센스, 애드고시]
 ---
 ![](../image/google_adsense/google_adsense.png)
 

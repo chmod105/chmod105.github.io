@@ -2,6 +2,7 @@
 title: "Oracle Cloud & Git Action CICD"
 layout: post
 categories: skill
+tags: [무료 서버, 클라우드 서버, git action, 깃 액션, cicd, 오라클 클라우드, 사이드 프로젝트]
 ---
 ![](../image/oracle_git/oracle_git.png)
 
