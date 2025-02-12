@@ -52,6 +52,7 @@
   #topBtn:hover {
       background-color: #0056b3;
       box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+      text-decoration: none;
   }
 </style>
 
@@ -126,7 +127,7 @@
     {% include menu.html menu=pages %}
   </header>
   {{ content }}
-  <a href="#" id="topBtn" title="Go to top">Top</a>
+  <a href="#" id="topBtn" title="Go to top"><strong>Top</strong></a>
   {% if site.external %}
   <footer>
     <div>{{ site.description | default: site.title }}</div>
