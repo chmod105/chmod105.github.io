@@ -3,7 +3,7 @@ title: "Oracle Cloud & Git Action CICD"
 layout: post
 categories: skill
 ---
-![](../image/oracle_git/oracle_git.png)
+<img src="../image/oracle_git/oracle_git.png" height="100px">
 
 
 ### 클라우드 서비스를 제공하는 대표적인 플랫폼
