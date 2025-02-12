@@ -1,7 +1,7 @@
 ---
-title:  "Google Adsense"
+title: "Google Adsense"
 layout: post
-categories: blog
+categories: skill
 ---
 ![](../image/google_adsense/google_adsense.png)
 
