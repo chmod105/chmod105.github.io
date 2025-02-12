@@ -7,6 +7,7 @@ layout: none
   {
     "title": "{{ post.title | escape }}",
     "url": "{{ post.url | relative_url }}",
+    "tags": "{{ post.tags | join: ', ' }}",
     "date": "{{ post.date | date: '%Y-%m-%d' }}",
     "content": "{{ post.content | strip_html | truncatewords: 50 }}"
   }{% unless forloop.last %},{% endunless %}
