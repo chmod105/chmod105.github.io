@@ -139,8 +139,8 @@
       searchInput: document.getElementById('search-input'),
       resultsContainer: document.getElementById('results-container'),
       json: '/search.json',
-      searchResultTemplate: '<a href="{url}">{title}</a> ({date})',
-      noResultsText: '검색 결과가 없습니다.',
+      searchResultTemplate: '<li><a href="{url}">{title} ({date})</a></li>',
+      noResultsText: 'None',
       limit: 10
   });
 </script>
