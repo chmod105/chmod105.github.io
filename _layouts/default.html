@@ -128,7 +128,8 @@
   <a href="#" id="topBtn" title="Go to top">Top</a>
   {% if site.external %}
   <footer>
-    <div>{{ site.description | default: site.title }}</div>
+<!--    <div>{{ site.description | default: site.title }}</div>-->
+    <div>{{ site.description }}</div>
     {% include menu.html menu=site.external %}
   </footer>
   {% endif %}
