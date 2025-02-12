@@ -114,8 +114,11 @@
   <header>
     <a href="{{ "/" | relative_url }}"><img src="{{ "/favicon.png" | relative_url }}" alt="Site Logo" style="height: 32px; vertical-align: middle;"> Blog</a>
 <!--    <a href="{{ "/" | relative_url }}" class="title">{{ site.title | escape }}</a>-->
-    <a style="margin: auto"><input type="text" id="search-input" placeholder="게시물 검색" />
-    <ul id="results-container"></ul></a>
+    <a style="margin: auto">
+      <input type="text" id="search-input" placeholder="게시물 검색" />
+      <div id="results-container"></div>
+    </a>
+
     {% include menu.html menu=pages %}
   </header>
   {{ content }}
