@@ -4,7 +4,7 @@ layout: post
 categories: skill
 tags: [광고 수익, 구글 광고, 구글 애드센스, 애드고시]
 ---
-![](../image/google_adsense/google_adsense.png)
+![](../image/google_adsense/google_ads.png)
 
 
 git hub 블로그를 운영하면서 소소한 수익창출을 바램으로 구글 애드센스 신청을 해보았다. 이 과정을 간단하게 공유하려 한다.
