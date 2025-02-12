@@ -33,3 +33,9 @@ plugins:
 
 include:
   - ads.txt
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      sitemap: true
