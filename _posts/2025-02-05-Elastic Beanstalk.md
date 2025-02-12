@@ -3,7 +3,7 @@ title: "AWS Elastic Beanstalk"
 layout: post
 categories: skill
 ---
-<img src="../image/aws_ebs/aws_ebs.png" height="100px">
+![](../image/aws_ebs/aws_ebs.png)
 
 
 기존 운영하고 있는 엘라스틱 빈스토크 서비스에서 리소스 과부하 문제가 발생 되면 ec2가 자동 추가증설이 되어 문제를 해결해 주고 있는데, ec2내 불필요하게 로드되는 부분이 있어 좀 더 신속한 대응이 어려운 부분이 있다.

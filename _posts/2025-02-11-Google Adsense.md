@@ -3,7 +3,7 @@ title: "Google Adsense"
 layout: post
 categories: skill
 ---
-<img src="../image/google_adsense/google_adsense.png" height="100px">
+![](../image/google_adsense/google_adsense.png)
 
 
 git hub 블로그를 운영하면서 소소한 수익창출을 바램으로 구글 애드센스 신청을 해보았다. 이 과정을 간단하게 공유하려 한다.
