@@ -30,12 +30,7 @@ comments:
 
 plugins:
  - jekyll-feed
+ - jekyll-sitemap
 
 include:
   - ads.txt
-
-defaults:
-  - scope:
-      path: ""
-    values:
-      sitemap: true
