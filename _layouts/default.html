@@ -113,36 +113,21 @@
     <!-- 메인 페이지: logo.png 사용 -->
     {% assign og_image = site.url | append: "/image/logo.png" %}
   {% else %}
-    <!-- 마크다운을 HTML로 변환 -->
-    {% assign rendered_content = page.content | markdownify %}
-
-    <!-- 마크다운 이미지 찾기 -->
-    {% if rendered_content contains '<img src="' %}
-      {% assign first_md_image = rendered_content | split:'<img src="' | slice: 1 | split:'"' | first %}
-    {% else %}
-      {% assign first_md_image = "" %}
-    {% endif %}
-
-    <!-- HTML <img> 태그에서 이미지 찾기 -->
-    {% if page.content contains '<img src="' %}
-      {% assign first_html_image = page.content | split:'<img src="' | slice: 1 | split:'"' | first %}
-    {% else %}
-      {% assign first_html_image = "" %}
-    {% endif %}
-
-    <!-- 최종 og:image 설정 -->
+    <!-- 프론트매터에 `image` 값이 있으면 사용 -->
     {% if page.image %}
-      {% assign og_image = site.url | append: page.image %}
-    {% elsif first_md_image contains "http" %}
-      {% assign og_image = first_md_image %}
-    {% elsif first_md_image != "" %}
-      {% assign og_image = site.url | append: first_md_image %}
-    {% elsif first_html_image contains "http" %}
-      {% assign og_image = first_html_image %}
-    {% elsif first_html_image != "" %}
-      {% assign og_image = site.url | append: first_html_image %}
+      {% assign og_image = page.image | absolute_url %}
     {% else %}
-      {% assign og_image = site.url | append: "/image/logo.png" %}
+      <!-- 첫 번째 이미지 자동 감지 -->
+      {% assign rendered_content = page.content | markdownify %}
+      {% assign first_image = rendered_content | split:'<img ' | slice: 1 | split:'src="' | slice: 1 | split:'"' | first %}
+
+      {% if first_image contains "http" %}
+        {% assign og_image = first_image %}
+      {% elsif first_image %}
+        {% assign og_image = first_image | absolute_url %}
+      {% else %}
+        {% assign og_image = site.url | append: "/image/logo.png" %}
+      {% endif %}
     {% endif %}
   {% endif %}
 
@@ -154,6 +139,7 @@
   <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
   <meta property="og:site_name" content="{{ site.title }}">
   <meta property="og:locale" content="ko_KR">
+
 
 </head> <!-- ✅ 닫는 태그 추가 -->
 
