@@ -109,25 +109,31 @@
   <script data-isso="http://{{ site.comments.isso_domain }}" src="//{{ site.comments.isso_domain }}/js/embed.min.js"></script>
   {% endif %}
 
-  {% assign first_image = page.content | split:'<img src="' | slice: 1 | split:'"' | first %}
-
-  {% if page.image %}
-    {% assign og_image = page.image %}
-  {% elsif first_image contains "http" %}
-    {% assign og_image = first_image %}
-  {% elsif first_image %}
-    {% assign og_image = site.url | append: first_image %}
-  {% else %}
+  {% if page.url == "/" %}
+    <!-- 메인 페이지: logo.png 사용 -->
     {% assign og_image = site.url | append: "/image/logo.png" %}
+  {% else %}
+    <!-- 게시글이면 첫 번째 이미지 자동 감지 -->
+    {% assign first_image = page.content | split:'<img src="' | slice: 1 | split:'"' | first %}
+
+    {% if first_image contains "http" %}
+      {% assign og_image = first_image %}
+    {% elsif first_image %}
+      {% assign og_image = site.url | append: first_image %}
+    {% else %}
+      {% assign og_image = site.url | append: "/image/logo.png" %}
+    {% endif %}
   {% endif %}
 
-  <meta property="og:title" content="{{ page.title }}">
+  <meta property="og:title" content="{{ page.title | default: site.title }}">
   <meta property="og:description" content="{{ page.excerpt | strip_html | truncate: 160 }}">
   <meta property="og:image" content="{{ og_image }}">
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-  <meta property="og:type" content="article">
+  <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
   <meta property="og:site_name" content="{{ site.title }}">
   <meta property="og:locale" content="ko_KR">
+
+
 
 </head> <!-- ✅ 닫는 태그 추가 -->
 
