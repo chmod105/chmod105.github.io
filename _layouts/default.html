@@ -113,25 +113,33 @@
     <!-- 메인 페이지: logo.png 사용 -->
     {% assign og_image = site.url | append: "/image/logo.png" %}
   {% else %}
-    <!-- 1. 마크다운을 HTML로 변환 -->
+    <!-- 마크다운을 HTML로 변환 -->
     {% assign rendered_content = page.content | markdownify %}
 
-    <!-- 2. 마크다운 이미지 찾기 -->
-    {% assign first_md_image = rendered_content | split:'<img src="' | slice: 1 | split:'"' | first %}
+    <!-- 마크다운 이미지 찾기 -->
+    {% if rendered_content contains '<img src="' %}
+      {% assign first_md_image = rendered_content | split:'<img src="' | slice: 1 | split:'"' | first %}
+    {% else %}
+      {% assign first_md_image = "" %}
+    {% endif %}
 
-    <!-- 3. HTML <img> 태그에서 이미지 찾기 -->
-    {% assign first_html_image = page.content | split:'<img src="' | slice: 1 | split:'"' | first %}
+    <!-- HTML <img> 태그에서 이미지 찾기 -->
+    {% if page.content contains '<img src="' %}
+      {% assign first_html_image = page.content | split:'<img src="' | slice: 1 | split:'"' | first %}
+    {% else %}
+      {% assign first_html_image = "" %}
+    {% endif %}
 
-    <!-- 4. 최종 og:image 설정 -->
+    <!-- 최종 og:image 설정 -->
     {% if page.image %}
       {% assign og_image = site.url | append: page.image %}
     {% elsif first_md_image contains "http" %}
       {% assign og_image = first_md_image %}
-    {% elsif first_md_image %}
+    {% elsif first_md_image != "" %}
       {% assign og_image = site.url | append: first_md_image %}
     {% elsif first_html_image contains "http" %}
       {% assign og_image = first_html_image %}
-    {% elsif first_html_image %}
+    {% elsif first_html_image != "" %}
       {% assign og_image = site.url | append: first_html_image %}
     {% else %}
       {% assign og_image = site.url | append: "/image/logo.png" %}
@@ -146,7 +154,6 @@
   <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
   <meta property="og:site_name" content="{{ site.title }}">
   <meta property="og:locale" content="ko_KR">
-
 
 </head> <!-- ✅ 닫는 태그 추가 -->
 
