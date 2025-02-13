@@ -1,5 +1,6 @@
 ---
 title: "Google Adsense"
+image: "/image/google_adsense/google_ads.png"
 layout: post
 categories: skill
 tags: [광고 수익, 구글 광고, 구글 애드센스, 애드고시]
