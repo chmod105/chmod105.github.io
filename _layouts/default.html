@@ -108,6 +108,27 @@
   {% if site.comments.isso_domain and page.layout == "post" %}
   <script data-isso="http://{{ site.comments.isso_domain }}" src="//{{ site.comments.isso_domain }}/js/embed.min.js"></script>
   {% endif %}
+
+  {% assign first_image = page.content | split:'<img src="' | slice: 1 | split:'"' | first %}
+
+  {% if page.image %}
+    {% assign og_image = page.image %}
+  {% elsif first_image contains "http" %}
+    {% assign og_image = first_image %}
+  {% elsif first_image %}
+    {% assign og_image = site.url | append: first_image %}
+  {% else %}
+    {% assign og_image = site.url | append: "/image/logo.png" %}
+  {% endif %}
+
+  <meta property="og:title" content="{{ page.title }}">
+  <meta property="og:description" content="{{ page.excerpt | strip_html | truncate: 160 }}">
+  <meta property="og:image" content="{{ og_image }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:locale" content="ko_KR">
+
 </head> <!-- ✅ 닫는 태그 추가 -->
 
 <body>

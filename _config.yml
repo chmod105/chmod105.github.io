@@ -34,3 +34,6 @@ plugins:
 
 include:
   - ads.txt
+
+site:
+  url: "https://chmod105.github.io"
